@@ -27,7 +27,6 @@ Hi. My name is CHOI Long Ho, and I am going to be a Year 3 Computer Science stud
 - keras
 - tensorflow
 - OpenCV
-- Folium
 
 # Research Projects
 
