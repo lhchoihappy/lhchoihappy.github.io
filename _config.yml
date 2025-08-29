@@ -23,8 +23,8 @@ navigation:                     # accepts {file, title, url, icon, sidebaricon}
 
 external:                       # accepts {file, title, url, icon, sidebaricon}
   - {title: Mail, icon: envelope, url: "mailto:happpys374@gmail.com"}
-  - {title: Github, icon: github, url: "https://github.com/HappyC11O3"}
-  - {title: Instagram, icon: instagram, url: "/lhchoiachappy"}
+  - {title: Github, icon: github, url: "https://github.com/lhchoihappy"}
+  - {title: Instagram, icon: instagram, url: "https://www.instagram.com/lhchoiachappy/"}
 
 comments:
 #  disqus_shortname: ""         # see https://disqus.com
