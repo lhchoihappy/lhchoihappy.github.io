@@ -19,9 +19,9 @@ show_sidebar: false              # show a sidebar instead of the usual header
 # Menu                          # for available icons see https://fontawesome.com/v5/icons/
 
 navigation:                     # accepts {file, title, url, icon, sidebaricon}
-  - {file: "index.html", title: "Home Change", icon: home}
-  - {file: "README.md", title: "About me", icon: address-card}
-
+  - {file: "happychoi.pdf", title: "CV", icon: home}
+  - {title: "About me", url: "https://happpys374.wixsite.com/happych0i"}
+  - {title: "Blog", file: "/blog.md"}
 external:                       # accepts {file, title, url, icon, sidebaricon}
   - {title: Mail, icon: envelope, url: "mailto:happpys374@gmail.com"}
   - {title: Github, icon: github, url: "https://github.com/lhchoihappy"}
