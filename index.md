@@ -24,6 +24,7 @@ Hi. My name is CHOI Long Ho, and I am going to be a Year 3 Computer Science stud
 - Design and Analysis of Algorithms
 - Data Structure
 - Statistics (both parametric and nonparametric)
+- Web Development
 - Operating Systems
 - Probability
 - Honor Discrete Mathematics
