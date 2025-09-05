@@ -12,7 +12,6 @@ Hi. My name is CHOI Long Ho, and I am going to be a Year 3 Computer Science stud
 - LaTeX
 - R
 - MS Office
-- HTML
 - SQL (PostgreSQL, MySQL)
 - React Native
 - XLMiner
