@@ -15,6 +15,7 @@ Hi. My name is CHOI Long Ho, and I am going to be a Year 3 Computer Science stud
 - SQL (PostgreSQL, MySQL)
 - React Native
 - XLMiner
+- HTML
 
 # Skills & Knowledges
 - Object-Oriented Programming
