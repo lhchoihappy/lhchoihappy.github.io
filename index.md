@@ -20,33 +20,27 @@ Hi. My name is CHOI Long Ho, and I am going to be a Year 3 Computer Science stud
 # Skills & Knowledges
 - Object-Oriented Programming
 - Artificial Intelligence
-- Machine Learning Techniques
+- Machine Learning
+- Reinforcement Learning
+- Software Engineering
+- Web Development
 - Design and Analysis of Algorithms
 - Data Structure
 - Statistics (both parametric and nonparametric)
-- Web Development
-- Operating Systems
 - Probability
+- Operating Systems
 - Honor Discrete Mathematics
 - Computer Organizations
 - Design Thinking
-
-# AI Libraries
-
-- Numpy
-- Pandas
-- GeoPandas
-- matplotlib
-- sklearn
-- pytorch
-- keras
-- tensorflow
-- OpenCV
 
 # Research Projects
 
 ## Heat Index Estimation (2025 Summer UROP)
 *Supervised by Prof. FUNG, Jimmy Chi Hung, and co-supervised by Dr. CHAN, Jimmy Wai Man*
 - predicting localized temperature exposure across different times and locations using a Sky-View Factor approach
+
+## Heat Index Estimation (2025 Fall UROP)
+*Supervised by Prof. FUNG, Jimmy Chi Hung, and co-supervised by Dr. CHAN, Jimmy Wai Man*
+- develop an hourly spatial map showing the sunshine minutes and solar irradiance in different points by using some radiation and building-shadow modules
 
 ---
