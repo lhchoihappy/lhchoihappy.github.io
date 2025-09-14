@@ -1,7 +1,3 @@
----
-layout: page
-title: ""
----
 
 Hi. My name is CHOI Long Ho, and I am currently a Year 3 Computer Science student with an Extended Major in Artificial Intelligence in HKUST.
 
