@@ -1,9 +1,4 @@
----
-layout: page
-title: ""
----
-
-Hi. My name is CHOI Long Ho, and I am going to be a Year 3 Computer Science student with an Extended Major in Artificial Intelligence in HKUST.
+Hi. My name is CHOI Long Ho, and I am currently a Year 3 Computer Science student with an Extended Major in Artificial Intelligence in HKUST.
 
 # Programming Languages
 
@@ -47,6 +42,6 @@ Hi. My name is CHOI Long Ho, and I am going to be a Year 3 Computer Science stud
 
 # Internship Experiences
 ## AI programmer
-*Centre for Intelligent Multidimensional Data Analytics Limited (June 2025 – Aug 2025)
+*Centre for Intelligent Multidimensional Data Analytics Limited (June 2025 – Aug 2025)*
 - Collaborate with senior engineers to work on some new web development projects (i.e. CV system for engineers)
 - Working on backend development using PostgreSQL and writing several APIs for the React Native frontend using JavaScript, Node.js, etc
