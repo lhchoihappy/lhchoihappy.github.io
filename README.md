@@ -4,9 +4,9 @@ permalink: "/about/"
 layout: page
 ---
 
-## Github Pages
+## Happy Choi's Homepage
 
-Just fork this [repository](https://github.com/niklasbuschmann/contrast) to `your_username.github.io` and adjust the `_config.yml` to use with [Github Pages](https://pages.github.com/) and your page is done.
+This is my personal homepage. This webpage is created and modified by forking this [repository](https://github.com/niklasbuschmann/contrast).
 
 ## Features
 
