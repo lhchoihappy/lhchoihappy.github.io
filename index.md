@@ -5,30 +5,21 @@ title: ""
 \
 Hi. My name is CHOI Long Ho, and I am currently a Year 3 Computer Science student with an Extended Major in Artificial Intelligence in HKUST.
 
-# Programming Languages
+# Skills, knowledges, programming Languages
 
-- C++
-- Python
-- LaTeX
-- R
-- MS Office
-- SQL (PostgreSQL, MySQL)
-- React Native
-- XLMiner
-- HTML
-
-# Skills & Knowledges
-- Object-Oriented Programming
-- Artificial Intelligence
+- Object-Oriented Programming (C++)
 - Machine Learning
 - Reinforcement Learning
-- Software Engineering
-- Web Development
+- Deep Learning in Computer Vision
+- Software Engineering (Java)
+- Web Development (PostgreSQL, JavaScript, Node.js, React Native) 
 - Design and Analysis of Algorithms
 - Data Structure
-- Statistics (both parametric and nonparametric)
+- Fundamentals of Statistics (R)
+- Nonparametric Statistics
 - Probability
-- Operating Systems
+- Operating Systems (Linux)
+- Data Mining and Knowledge Discovery (XLMiner)
 - Honor Discrete Mathematics
 - Computer Organizations
 - Design Thinking
@@ -41,7 +32,8 @@ Hi. My name is CHOI Long Ho, and I am currently a Year 3 Computer Science studen
 
 ## Heat Index Estimation (2025 Fall UROP)
 *Supervised by Prof. FUNG, Jimmy Chi Hung, and co-supervised by Dr. CHAN, Jimmy Wai Man*
-- develop an hourly spatial map showing the sunshine minutes and solar irradiance in different points by using some radiation and building-shadow modules
+- Investigation of the determination and visualization of the sunlight pattern in minute-level intervals with a high temporal-resolution analysis
+- Investigation of map merging strategies without boundary artifacts
 
 ---
 
