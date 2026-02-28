@@ -19,7 +19,7 @@ show_sidebar: false              # show a sidebar instead of the usual header
 # Menu                          # for available icons see https://fontawesome.com/v5/icons/
 
 navigation:                     # accepts {file, title, url, icon, sidebaricon}
-  - {title: "CV", url: "/happychoi_cv.pdf"}
+  - {title: "CV", url: "/happychoi_CV.pdf"}
   - {title: "About me", url: "https://happpys374.wixsite.com/happych0i"}
   - {title: "Blog", file: "blog.md"}
 external:                       # accepts {file, title, url, icon, sidebaricon}
