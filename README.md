@@ -1,9 +1,10 @@
-# Personal site — version 2
+# Personal site
 
 A hand-written static site: three HTML pages, one stylesheet and one small script.
 No Jekyll, no build step, no frameworks, no bundled template. Open `index.html`
 in a browser and it works.
 
+<!-- 
 ## Files
 
 ```
@@ -63,7 +64,6 @@ Two deliberate choices:
 - **The CV's `\hspace{...}0` block** in the LaTeX is a spacing artifact that
   renders a stray `0` after the "Last updated" line. It is not carried over
   here.
-
 ## Still to do
 
 1. **The CV PDF has not been copied into this folder.** The "Download CV (PDF)"
@@ -110,4 +110,4 @@ landing page. That means: one accent colour, system fonts, a readable measure of
 about 62 characters, underlined links, visible focus outlines, and no cards,
 gradients, or animation beyond the theme colour fading over 0.18s. Print styles
 are included, so `Ctrl+P` on `cv.html` gives a clean paper copy with the nav bar
-and footer removed.
+and footer removed. -->
