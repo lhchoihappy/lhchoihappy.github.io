@@ -3,21 +3,85 @@
 
 {% include head.html %}
 
-<header class="hover smooth">
-  {% unless site.show_minimal and site.navigation and site.external %}
-    <h1 {% if site.navigation and site.external %}class="full"{% endif %}><a href="{{ "/" | relative_url }}">{{ site.title | escape }}</a></h1>
-  {% endunless %}
-  {% include menu.html menu=site.navigation %}
-  {% include menu.html menu=site.external %}
-</header>
+<body class="layout-{{ page.layout | default: 'default' }}">
+  <a class="skip-link" href="#main">Skip to content</a>
 
-{{ content }}
+  <header class="site-header">
+    <div class="site-header__inner">
 
-{%- if site.footer -%}
-<footer class="hover">
-  <div>{{ site.description }}</div>
-  {% include menu.html menu=site.footer %}
-</footer>
-{%- endif -%}
+      <a class="brand" href="{{ "/" | relative_url }}" aria-label="{{ site.title | escape }} — home">
+        <span class="brand__mark" aria-hidden="true">HC</span>
+        <span class="brand__name">{{ site.title | escape }}</span>
+      </a>
+
+      {%- if site.navigation -%}
+      <nav class="site-nav" aria-label="Main navigation">
+        {%- for item in site.navigation -%}
+          {%- assign node = site.pages | where: "name", item.file | first -%}
+          {%- assign url = item.url | default: node.url -%}
+          {%- if url == page.url -%}
+            <a class="is-active" href="{{ url | relative_url }}">{{ item.title }}</a>
+          {%- else -%}
+            <a href="{{ url | relative_url }}">{{ item.title }}</a>
+          {%- endif -%}
+        {%- endfor -%}
+      </nav>
+      {%- endif -%}
+
+      <div class="site-header__actions">
+        {%- if site.external -%}
+        <nav class="social-nav" aria-label="Social links">
+          {%- for item in site.external -%}
+          <a class="social-icon" href="{{ item.url | relative_url }}"
+             aria-label="{{ item.title | escape }}" title="{{ item.title | escape }}" target="_blank" rel="noopener">
+            <svg aria-hidden="true" focusable="false" width="1.15em" height="1.15em">
+              <use xlink:href="{{ "/assets/fontawesome/icons.svg" | relative_url }}#{{ item.icon }}"></use>
+            </svg>
+          </a>
+          {%- endfor -%}
+        </nav>
+        {%- endif -%}
+
+        <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Toggle colour theme">
+          <svg class="icon icon--sun" aria-hidden="true" focusable="false" viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <circle cx="12" cy="12" r="4.4"></circle>
+            <path d="M12 2v2.4M12 19.6V22M2 12h2.4M19.6 12H22M4.9 4.9l1.7 1.7M17.4 17.4l1.7 1.7M4.9 19.1l1.7-1.7M17.4 6.6l1.7-1.7"></path>
+          </svg>
+          <svg class="icon icon--moon" aria-hidden="true" focusable="false" viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"></path>
+          </svg>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <main id="main" class="site-main">
+    {{ content }}
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <div class="site-footer__brand">
+        <p class="site-footer__title">{{ site.title | escape }}</p>
+        <p class="site-footer__desc">{{ site.description | escape }}</p>
+      </div>
+      <nav class="site-footer__nav" aria-label="Footer navigation">
+        {%- if site.navigation -%}
+          {%- for item in site.navigation -%}
+            {%- assign node = site.pages | where: "name", item.file | first -%}
+            {%- assign url = item.url | default: node.url -%}
+            <a href="{{ url | relative_url }}">{{ item.title }}</a>
+          {%- endfor -%}
+        {%- endif -%}
+        <a href="/blog/">Blog</a>
+      </nav>
+      <p class="site-footer__copy">
+        © {{ 'now' | date: "%Y" }} {{ site.title | escape }} · Built with
+        <a href="https://jekyllrb.com" target="_blank" rel="noopener">Jekyll</a>
+      </p>
+    </div>
+  </footer>
+</body>
 
 </html>

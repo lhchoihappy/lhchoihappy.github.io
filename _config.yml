@@ -20,8 +20,8 @@ show_sidebar: false              # show a sidebar instead of the usual header
 
 navigation:                     # accepts {file, title, url, icon, sidebaricon}
   - {title: "CV", url: "/happychoi_CV.pdf"}
+  - {title: "Projects", file: "projects.md"}
   - {title: "About me", url: "https://happpys374.wixsite.com/happych0i"}
-  - {title: "Blog", file: "blog.md"}
 external:                       # accepts {file, title, url, icon, sidebaricon}
   - {title: Mail, icon: envelope, url: "mailto:happpys374@gmail.com"}
   - {title: Github, icon: github, url: "https://github.com/lhchoihappy"}
