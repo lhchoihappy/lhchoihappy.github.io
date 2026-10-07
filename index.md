@@ -10,13 +10,13 @@ title: ""
     <h1 class="hero__title">Hi, I'm <span class="gradient-text">Happy</span>.<br>I study computers, and I really like AI.</h1>
     <p class="hero__subtitle">
       Welcome to my little corner of the internet! My full name is CHOI Long Ho, but most people
-      call me <strong>Happy</strong>. I'm a Year&nbsp;3 Computer Science student with an Extended
+      call me <strong>Happy</strong>. I'm a Year&nbsp;4 Computer Science student with an Extended
       Major in Artificial Intelligence at HKUST, and a lot of my time goes into UROP research on
       how buildings and sunlight shape the heat around us.
     </p>
     <div class="btn-group hero__actions">
       <a class="btn btn--primary" href="/happychoi_CV.pdf">Download CV</a>
-      <a class="btn btn--ghost" href="/projects/">See my research demo</a>
+      <a class="btn btn--ghost" href="/projects/">View research project</a>
     </div>
     <ul class="hero__facts">
       <li><span class="dot"></span> Undergraduate @ HKUST</li>
@@ -56,7 +56,7 @@ title: ""
 
   <p>
     I study at <a href="https://hkust.edu.hk" target="_blank" rel="noopener">HKUST</a>, where I'm in
-    my third year of Computer Science with an Extended Major in Artificial Intelligence. Right now
+    my final year of Computer Science with an Extended Major in Artificial Intelligence. Right now
     I'm working on an undergraduate research project that looks at how buildings and their shadows
     affect how warm different spots in a city feel. Away from research I enjoy web development and
     writing little tools that make data easier to see.

@@ -1,16 +1,18 @@
 ---
 title: "Projects"
 layout: default
+# Interactive demo sections are hidden for now (they are placeholder models, not real
+# research output). Set this to true to show them again, or replace them with your own.
+demos: false
 ---
 
 <a class="back-link" href="/">← Back to home</a>
 
 <header class="page-header">
-  <p class="eyebrow">Research &amp; demos</p>
+  <p class="eyebrow">Research</p>
   <h1 class="page-title">Projects</h1>
   <p class="page-subtitle">
-    A page about my UROP research on heat index estimation — with a couple of little interactive
-    demos that illustrate the ideas behind it.
+    A page about my UROP research on heat index estimation at HKUST.
   </p>
 </header>
 
@@ -38,6 +40,7 @@ layout: default
   </article>
 </section>
 
+{% if page.demos %}
 <section class="section" id="demo-daylight">
   <header class="section__head">
     <p class="eyebrow">Demo 1 · Interactive</p>
@@ -132,3 +135,4 @@ layout: default
 </section>
 
 <script defer src="/assets/js/projects-demo.js"></script>
+{% endif %}
