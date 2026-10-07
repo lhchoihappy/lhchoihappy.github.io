@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CV — Happy Choi</title>
+<meta name="description" content="Curriculum vitae of CHOI Long Ho (Happy Choi): Computer Science and Artificial Intelligence at HKUST, UROP research on urban heat and building shadows, and internship experience.">
+<link rel="stylesheet" href="assets/styles.css">
+<script>
+(function () {
+  var theme;
+  try { theme = localStorage.getItem('happy-theme'); } catch (e) { theme = null; }
+  if (theme !== 'light' && theme !== 'dark') {
+    theme = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+  }
+  document.documentElement.setAttribute('data-theme', theme);
+})();
+</script>
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="nav">
+  <div class="nav__inner">
+    <a class="nav__name" href="index.html">Happy Choi</a>
+
+    <nav aria-label="Main">
+      <ul class="nav__links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="cv.html" aria-current="page">CV</a></li>
+        <li><a href="projects.html">Projects</a></li>
+      </ul>
+    </nav>
+
+    <div class="nav__end">
+      <button type="button" class="theme-toggle" id="theme-toggle" aria-pressed="false">
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2v2.4M12 19.6V22M2 12h2.4M19.6 12H22M4.9 4.9l1.7 1.7M17.4 17.4l1.7 1.7M4.9 19.1l1.7-1.7M17.4 6.6l1.7-1.7"/></svg>
+        <span id="theme-toggle-label">Dark mode</span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main" class="wrap">
+
+  <header class="page-head">
+    <h1>CHOI, Long Ho Happy</h1>
+    <p class="lede">
+      <a href="mailto:lhchoiac@connect.ust.hk">lhchoiac@connect.ust.hk</a> &middot;
+      <a href="https://www.linkedin.com/in/long-ho-choi-3376aa2b5/" target="_blank" rel="noopener">LinkedIn</a> &middot;
+      <a href="https://github.com/lhchoihappy" target="_blank" rel="noopener">GitHub</a> &middot;
+      <a href="https://lhchoihappy.github.io/">lhchoihappy.github.io</a>
+    </p>
+    <ul class="linkrow" style="margin-top:1.25rem">
+      <li><a class="is-primary" href="happychoi_cv.pdf">Download as PDF</a></li>
+      <li><a href="projects.html">Project details</a></li>
+    </ul>
+    <p class="meta" style="margin-top:1rem">Last updated October 2026</p>
+  </header>
+
+  <!-- ================= Education ================= -->
+  <section class="section" id="education">
+    <h2>Education</h2>
+
+    <div class="entry">
+      <div class="entry__when">Sept 2023 – Present</div>
+      <div class="entry__body">
+        <h3>The Hong Kong University of Science and Technology (HKUST)</h3>
+        <p>
+          Bachelor&rsquo;s Degree in Engineering, major in Computer Science, with an
+          Extended Major in Artificial Intelligence.
+        </p>
+        <ul>
+          <li>GPA: 3.112 / 4.3</li>
+          <li>Minor in Mathematics</li>
+          <li>Minor in Big Data Technology</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="entry">
+      <div class="entry__when">Sept 2017 – June 2023</div>
+      <div class="entry__body">
+        <h3>Tin Ka Ping Secondary School (TKPSS)</h3>
+        <p class="entry__org">2023 HKDSE</p>
+        <ul>
+          <li>5* in Mathematics (Compulsory Part)</li>
+          <li>5* in Mathematics (Extended Part Module 2)</li>
+          <li>5 in Physics, 5 in Chemistry, 5 in Liberal Studies</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= Projects & competitions ================= -->
+  <section class="section" id="projects">
+    <h2>Projects &amp; competitions</h2>
+
+    <div class="entry">
+      <div class="entry__when">Jul 2026 – Present</div>
+      <div class="entry__body">
+        <h3>TrustShop: Agent-Orchestrated Online Shopping Assistant</h3>
+        <p class="entry__org">Final Year Project &middot; supervised by Prof. Nevin Lianwen ZHANG</p>
+        <ul>
+          <li>Designed and implemented a trust-weighted review summarisation module using aspect clustering, pros/cons extraction, and self-critique verification with LLMs.</li>
+          <li>Built a deterministic data acquisition pipeline with schema validation and commercial API fallback, collecting and processing product and review data across platforms.</li>
+          <li>Developed tool schemas and contributed to the agent orchestration layer for open-ended query decomposition and trust-aware routing.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="entry">
+      <div class="entry__when">Sept 2025 – Oct 2025</div>
+      <div class="entry__body">
+        <h3>Cathay Hackathon 2025 — Participant</h3>
+        <ul>
+          <li>Proposed a RAG-based AI chatbot for airline transit information, converting UX challenges into technical proposals under time constraints.</li>
+          <li>Applied design thinking and collaborative brainstorming to improve passenger services.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= Internships ================= -->
+  <section class="section" id="experience">
+    <h2>Internship experience</h2>
+
+    <div class="entry">
+      <div class="entry__when">July 2026 – Aug 2026</div>
+      <div class="entry__body">
+        <h3>Summer AI Intern</h3>
+        <p class="entry__org">ESD Services Limited (ESDlife) &middot; Hong Kong, China</p>
+        <ul>
+          <li>Performed UAT testing.</li>
+          <li>Implemented two social media web scrapers (Facebook and Instagram).</li>
+          <li>Analysed social media trend topics using various NLP, LLM and ML methods.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="entry">
+      <div class="entry__when">June 2025 – Aug 2025</div>
+      <div class="entry__body">
+        <h3>AI Programmer</h3>
+        <p class="entry__org">Centre for Intelligent Multidimensional Data Analytics Limited &middot; Hong Kong, China</p>
+        <ul>
+          <li>Collaborated with senior engineers on new web development projects, including a CV system for engineers.</li>
+          <li>Worked on backend development using PostgreSQL and wrote several APIs for the React Native frontend using JavaScript and Node.js.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= Awards ================= -->
+  <section class="section" id="awards">
+    <h2>Awards &amp; recognitions</h2>
+
+    <div class="entry">
+      <div class="entry__when">Nov 2023</div>
+      <div class="entry__body">
+        <h3>Dean of Engineering Scholarship (HKUST)</h3>
+        <p class="entry__org">In recognition of excellent academic achievement in HKDSE.</p>
+      </div>
+    </div>
+
+    <div class="entry">
+      <div class="entry__when">Oct 2023</div>
+      <div class="entry__body">
+        <h3>Outstanding TKPSS Graduate Award (Tin Ka Ping Foundation)</h3>
+        <p class="entry__org">In recognition of remarkable academic achievement in HKDSE.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= UROP ================= -->
+  <section class="section" id="research">
+    <h2>Undergraduate research project experience</h2>
+
+    <div class="entry">
+      <div class="entry__when">Jun 2025 – Present</div>
+      <div class="entry__body">
+        <h3>Heat Index Estimation — UROP, HKUST</h3>
+        <p class="entry__org">
+          Supervised by Prof. FUNG, Jimmy Chi Hung; co-supervised by Dr. CHAN, Jimmy
+          Wai Man, and Dr. Tilman Leo Hohenberger (from 2026 Summer).
+        </p>
+
+        <div class="subentry">
+          <div class="subentry__head">
+            <h4>2026 Fall</h4>
+            <span class="subentry__when">Sep 2026 – Present</span>
+          </div>
+          <ul>
+            <li>Estimate spatial temperature across the whole Hong Kong region.</li>
+            <li>Use various neural network models for land cover classification.</li>
+            <li>Plan and operate drones to capture DJI thermal JPG images in specified regions.</li>
+          </ul>
+        </div>
+
+        <div class="subentry">
+          <div class="subentry__head">
+            <h4>2026 Summer</h4>
+            <span class="subentry__when">Jun 2026 – Aug 2026</span>
+          </div>
+          <ul>
+            <li>Developed a Python script for automatic geo-referencing of thermal images (DJI thermal JPG to geo-coded raster).</li>
+            <li>Operated drones to capture DJI thermal JPG images.</li>
+          </ul>
+        </div>
+
+        <div class="subentry">
+          <div class="subentry__head">
+            <h4>2026 Spring</h4>
+            <span class="subentry__when">Jan 2026 – May 2026</span>
+          </div>
+          <ul>
+            <li>Developed a 24-hour building shadow system across the HKUST campus and expanded the domain to the whole Hong Kong region.</li>
+            <li>Optimized building shadow computation using multi-threading and multi-processing techniques.</li>
+          </ul>
+        </div>
+
+        <div class="subentry">
+          <div class="subentry__head">
+            <h4>2025 Fall</h4>
+            <span class="subentry__when">Sep 2025 – Dec 2025</span>
+          </div>
+          <ul>
+            <li>Developed an urban building shadow analysis framework with seamless map merging for dense urban environments.</li>
+            <li>Investigated sunlight pattern determination and visualization at minute-level intervals with high temporal resolution.</li>
+            <li>Investigated map merging strategies without boundary artifacts.</li>
+            <li>Performed GIS work on building shadows of different morphologies, solar irradiance, and Hong Kong map extraction.</li>
+          </ul>
+        </div>
+
+        <div class="subentry">
+          <div class="subentry__head">
+            <h4>2025 Summer</h4>
+            <span class="subentry__when">Jun 2025 – Aug 2025</span>
+          </div>
+          <ul>
+            <li>Predicted localized temperature exposure across different times and locations using a Sky-View Factor approach.</li>
+            <li>Performed GIS work on multi-source geospatial data (3D building morphology, building shadows) and microclimate parameters (solar radiation, temperature) using QGIS, CSDI portal, Open3Dhk, and Overpass Turbo.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= Coursework ================= -->
+  <section class="section" id="coursework">
+    <h2>Course highlights</h2>
+
+    <dl class="facts">
+      <dt>AI &amp; data</dt>
+      <dd>Artificial Intelligence (Python), Large Language Model, AI Agents, Image Processing, Machine Learning, NLP, Data Mining, Reinforcement Learning</dd>
+
+      <dt>Programming &amp; systems</dt>
+      <dd>Object-Oriented Programming (C++), Software Engineering (Java), Operating Systems (Linux), Data Structure, Design and Analysis of Algorithms, Computer Organizations</dd>
+
+      <dt>Math &amp; statistics</dt>
+      <dd>Statistical Computing (R), Nonparametric Statistics, Probability, Honor Discrete Mathematics</dd>
+
+      <dt>Web &amp; others</dt>
+      <dd>Web Development (PostgreSQL, JavaScript, Node.js, React Native), GIS (ArcGIS, QGIS), Vibe Coding, Design Thinking</dd>
+    </dl>
+  </section>
+
+  <!-- ================= Soft skills ================= -->
+  <section class="section" id="skills">
+    <h2>Soft skills</h2>
+    <ul>
+      <li><strong>Willing to learn:</strong> proactively acquired geospatial and environmental knowledge for a research project, despite having no prior background in the field.</li>
+      <li><strong>Time management:</strong> punctual and attends meetings early; consistently finishes tasks days before deadlines.</li>
+      <li><strong>Organizational:</strong> proficient in organizing workloads and prioritizing tasks using planning tools to optimize productivity.</li>
+      <li><strong>Proactive self-learner:</strong> completed Coursera and Kaggle courses; self-taught the latest AI tools and concepts (for example LLMs and AI agents), virtual machines, JavaScript and Node.js outside of work hours.</li>
+      <li><strong>Open to criticism:</strong> embraces feedback as a growth opportunity and actively integrates constructive criticism to improve performance.</li>
+    </ul>
+  </section>
+
+  <!-- ================= Activities ================= -->
+  <section class="section" id="activities">
+    <h2>Enrichment activities and leadership roles</h2>
+
+    <div class="entry">
+      <div class="entry__when">Feb 2025 – May 2025</div>
+      <div class="entry__body">
+        <h3>Tin Ka Ping Secondary School F.5 Mathematics (Extended Part Module 2) Enhancement Class Tutor</h3>
+        <ul>
+          <li>Prepared course outlines and handouts, and reviewed and provided feedback on coursework for 23 participating students taking M2 as an elective subject in HKDSE.</li>
+          <li>Delivered a total of 7 tutorials based on the course materials prepared.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="entry">
+      <div class="entry__when">Apr 2024 – May 2024</div>
+      <div class="entry__body">
+        <h3>Tutor of the Revision Class for Special Education Needs (SEN) students</h3>
+        <ul>
+          <li>Gave academic support and guidance to the SEN students.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="entry">
+      <div class="entry__when">Oct 2023 – Feb 2024</div>
+      <div class="entry__body">
+        <h3>Tin Ka Ping Secondary School F.6 Chemistry Enhancement Class Tutor</h3>
+        <ul>
+          <li>Prepared course outlines and handouts, and reviewed and provided feedback on coursework for 1–2 participating students taking Chemistry as an elective subject in HKDSE.</li>
+          <li>Delivered a total of 10 tutorials based on the course materials prepared.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="foot">
+  <div class="foot__inner">
+    <span>&copy; 2026 CHOI, Long Ho Happy</span>
+    <nav class="foot__links" aria-label="Footer">
+      <a href="index.html">Home</a>
+      <a href="cv.html">CV</a>
+      <a href="projects.html">Projects</a>
+      <a href="mailto:lhchoiac@connect.ust.hk">Email</a>
+    </nav>
+  </div>
+</footer>
+
+<script src="assets/theme.js"></script>
+</body>
+</html>

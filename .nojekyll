@@ -1,0 +1,4 @@
+# This file tells GitHub Pages to serve the files as they are, without running
+# them through Jekyll. The site is plain HTML, so no build step is wanted.
+#
+# The file is intentionally empty — its presence is the entire signal.

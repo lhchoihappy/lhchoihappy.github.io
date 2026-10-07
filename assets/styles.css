@@ -1,0 +1,490 @@
+/* ==========================================================================
+   Happy Choi — personal site, version 2
+   Plain CSS. Light and dark themes. No build step, no framework.
+   ========================================================================== */
+
+/* --- Theme tokens ------------------------------------------------------- */
+
+:root {
+  --bg:         #ffffff;
+  --surface:    #f7f7f6;
+  --border:     #d8d8d4;
+  --text:       #1d1d1b;
+  --text-muted: #5c5c57;
+  --accent:     #14509b;
+  --accent-soft:#e8eef7;
+  --shadow:     0 1px 2px rgba(0, 0, 0, .06);
+  --font-body:  "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif;
+  --font-mono:  Consolas, "SF Mono", Monaco, "Courier New", monospace;
+  --page-width: 880px;
+}
+
+:root[data-theme="dark"] {
+  --bg:         #16181c;
+  --surface:    #1e2126;
+  --border:     #33373e;
+  --text:       #e7e8ea;
+  --text-muted: #a2a6ad;
+  --accent:     #79aef5;
+  --accent-soft:#232c39;
+  --shadow:     0 1px 2px rgba(0, 0, 0, .4);
+}
+
+/* --- Base -------------------------------------------------------------- */
+
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+html {
+  /* Keeps anchor links clear of the sticky nav bar. */
+  scroll-padding-top: 4.5rem;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Only animate the theme flip, and only when the user allows motion. */
+@media (prefers-reduced-motion: no-preference) {
+  body { transition: background-color .18s ease, color .18s ease; }
+}
+
+h1, h2, h3, h4 {
+  line-height: 1.25;
+  margin: 0 0 .5em;
+  font-weight: 650;
+}
+
+h1 { font-size: 1.9rem; letter-spacing: -.015em; }
+h2 { font-size: 1.35rem; }
+h3 { font-size: 1.05rem; }
+h4 { font-size: .95rem; }
+
+p { margin: 0 0 1em; }
+
+a {
+  color: var(--accent);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+}
+a:hover { text-decoration-thickness: 2px; }
+
+hr {
+  border: 0;
+  border-top: 1px solid var(--border);
+  margin: 2.5rem 0;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* Visible only to screen readers, until focused. */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  z-index: 100;
+  padding: .6rem 1rem;
+  background: var(--accent);
+  color: #fff;
+}
+.skip-link:focus {
+  left: .5rem;
+  top: .5rem;
+}
+
+/* --- Top bar ----------------------------------------------------------- */
+
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+}
+
+.nav__inner {
+  max-width: var(--page-width);
+  margin: 0 auto;
+  padding: .5rem 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.nav__name {
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--text);
+  text-decoration: none;
+  letter-spacing: -.01em;
+  white-space: nowrap;
+}
+.nav__name:hover { color: var(--accent); }
+
+.nav__links {
+  display: flex;
+  gap: .25rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav__links a {
+  display: inline-block;
+  padding: .4rem .75rem;
+  border-radius: 4px;
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: .95rem;
+  border: 1px solid transparent;
+}
+.nav__links a:hover {
+  color: var(--text);
+  background: var(--surface);
+}
+
+/* Marks the page you are currently on. */
+.nav__links a[aria-current="page"] {
+  color: var(--text);
+  font-weight: 600;
+  border-color: var(--border);
+  background: var(--surface);
+}
+
+.nav__end {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+}
+
+/* --- Theme toggle ------------------------------------------------------ */
+
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: .45rem;
+  padding: .4rem .7rem;
+  font: inherit;
+  font-size: .9rem;
+  color: var(--text-muted);
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  cursor: pointer;
+}
+.theme-toggle:hover {
+  color: var(--text);
+  background: var(--surface);
+}
+.theme-toggle svg {
+  width: 1rem;
+  height: 1rem;
+  flex: none;
+}
+
+/* Show the sun in dark mode, the moon in light mode — the icon is the
+   action you get by clicking, which reads more naturally than the state. */
+.theme-toggle .icon-sun  { display: none; }
+:root[data-theme="dark"] .theme-toggle .icon-sun  { display: block; }
+:root[data-theme="dark"] .theme-toggle .icon-moon { display: none; }
+
+/* --- Page frame -------------------------------------------------------- */
+
+.wrap {
+  max-width: var(--page-width);
+  margin: 0 auto;
+  padding: 2.25rem 1.25rem 1rem;
+}
+
+.lede {
+  font-size: 1.05rem;
+  color: var(--text-muted);
+  max-width: 62ch;
+}
+
+.page-head {
+  padding-bottom: 1.25rem;
+  margin-bottom: 1.75rem;
+  border-bottom: 1px solid var(--border);
+}
+
+/* --- Sections ---------------------------------------------------------- */
+
+.section { margin: 0 0 2.5rem; }
+
+.section > h2 {
+  padding-bottom: .4rem;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 1.1rem;
+}
+
+/* --- Home hero --------------------------------------------------------- */
+
+.hero {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin-bottom: 2.5rem;
+}
+
+.hero__text { flex: 1 1 22rem; }
+.hero__text h1 { margin-bottom: .6rem; }
+
+.hero__aside {
+  flex: 0 0 15rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--surface);
+  padding: 1.1rem;
+  box-shadow: var(--shadow);
+}
+
+.hero__aside h2 {
+  font-size: .95rem;
+  border: 0;
+  padding: 0;
+  margin-bottom: .5rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: .06em;
+}
+
+.hero__aside dl {
+  margin: 0;
+  font-size: .92rem;
+}
+.hero__aside dt {
+  color: var(--text-muted);
+  font-size: .8rem;
+  text-transform: uppercase;
+  letter-spacing: .05em;
+  margin-top: .7rem;
+}
+.hero__aside dd {
+  margin: .1rem 0 0;
+  overflow-wrap: anywhere;
+}
+.hero__aside dl > dt:first-child { margin-top: 0; }
+
+/* --- Inline link row --------------------------------------------------- */
+
+.linkrow {
+  list-style: none;
+  margin: 0 0 1.5rem;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+}
+
+.linkrow a {
+  display: inline-block;
+  padding: .45rem .85rem;
+  font-size: .92rem;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  background: var(--surface);
+  color: var(--text);
+  text-decoration: none;
+}
+.linkrow a:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+.linkrow a.is-primary {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+.linkrow a.is-primary:hover { opacity: .9; color: #fff; }
+:root[data-theme="dark"] .linkrow a.is-primary { color: #10131a; }
+
+/* --- CV entries -------------------------------------------------------- */
+
+/* An entry is a date column plus a body column. A rule is drawn above every
+   entry (including the first) to separate it from the section heading, which
+   is itself underlined — matching how a printed CV is laid out. */
+.entry {
+  display: grid;
+  grid-template-columns: 10.5rem 1fr;
+  gap: .25rem 1.5rem;
+  padding: 1.1rem 0;
+  border-top: 1px solid var(--border);
+}
+.entry:last-child { padding-bottom: 0; }
+
+.entry__when {
+  color: var(--text-muted);
+  font-size: .89rem;
+  padding-top: .15rem;
+}
+
+/* The right-hand column of a single-column entry. */
+.entry__body > :last-child { margin-bottom: 0; }
+.entry__body h3 { margin-bottom: .15rem; }
+
+.entry__org {
+  color: var(--text-muted);
+  font-size: .93rem;
+  margin-bottom: .5rem;
+}
+
+.entry__body ul {
+  margin: 0;
+  padding-left: 1.15rem;
+}
+.entry__body li { margin-bottom: .35rem; }
+
+/* Compact tag list, used for skills and coursework. */
+.tags {
+  list-style: none;
+  margin: .3rem 0 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: .35rem;
+}
+.tags li {
+  font-size: .84rem;
+  padding: .15rem .5rem;
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  background: var(--surface);
+  color: var(--text-muted);
+}
+
+/* Two-column block for skills: label on the left, values on the right. */
+.facts {
+  display: grid;
+  grid-template-columns: 10.5rem 1fr;
+  gap: .6rem 1.5rem;
+  margin: 0;
+  font-size: .95rem;
+}
+.facts dt {
+  color: var(--text-muted);
+  font-weight: 600;
+}
+.facts dd { margin: 0; }
+
+/* --- Project write-ups ------------------------------------------------- */
+
+/* Small muted line under a page or entry heading, e.g. a supervisor note. */
+.meta {
+  color: var(--text-muted);
+  font-size: .92rem;
+  margin: .1rem 0 .6rem;
+}
+
+/* A dated phase nested inside one longer entry, e.g. the terms of a research
+   project. Indented under a left rule so the nesting is visible. */
+.subentry {
+  border-left: 2px solid var(--border);
+  padding: 0 0 .1rem 1rem;
+  margin: 1rem 0 0;
+}
+.subentry__head {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .25rem .75rem;
+  align-items: baseline;
+  margin-bottom: .35rem;
+}
+.subentry__head h4 {
+  margin: 0;
+  font-size: .98rem;
+}
+.subentry__when {
+  color: var(--text-muted);
+  font-size: .87rem;
+}
+.subentry > ul { margin: 0; }
+.subentry > ul > li { margin-bottom: .3rem; }
+.subentry > ul > li:last-child { margin-bottom: 0; }
+
+.project {
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--surface);
+  padding: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+.project h2 { font-size: 1.15rem; margin-bottom: .25rem; }
+.project h3 {
+  font-size: .95rem;
+  margin: 1.2rem 0 .5rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: .05em;
+}
+.project > :last-child { margin-bottom: 0; }
+
+/* --- Footer ------------------------------------------------------------ */
+
+.foot {
+  border-top: 1px solid var(--border);
+  margin-top: 3rem;
+  padding: 1.5rem 1.25rem 2.5rem;
+  font-size: .9rem;
+  color: var(--text-muted);
+}
+.foot__inner {
+  max-width: var(--page-width);
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem 1.5rem;
+  align-items: baseline;
+}
+.foot__links {
+  margin-left: auto;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* --- Small screens ----------------------------------------------------- */
+
+@media (max-width: 640px) {
+  h1 { font-size: 1.6rem; }
+
+  .nav__inner { padding: .5rem .9rem; }
+  .nav__end { margin-left: 0; width: 100%; }
+  .theme-toggle { width: 100%; justify-content: center; }
+
+  .wrap { padding: 1.5rem .9rem 1rem; }
+
+  .hero__aside { flex-basis: 100%; }
+
+  /* Stack CV entries so dates sit above the description. */
+  .entry,
+  .facts {
+    grid-template-columns: 1fr;
+    gap: .2rem;
+  }
+  .entry__when { padding-top: 0; }
+}
+
+/* --- Printing ---------------------------------------------------------- */
+
+@media print {
+  .nav, .foot, .theme-toggle, .skip-link { display: none; }
+  .wrap { max-width: none; padding: 0; }
+  body { font-size: 11.5pt; }
+  .entry { break-inside: avoid; }
+  a { color: inherit; text-decoration: none; }
+}

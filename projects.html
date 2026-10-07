@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Projects — Happy Choi</title>
+<meta name="description" content="Projects by Happy Choi: TrustShop, an agent-orchestrated shopping assistant, and UROP research on urban heat, building shadows and drone thermal imaging in Hong Kong.">
+<link rel="stylesheet" href="assets/styles.css">
+<script>
+(function () {
+  var theme;
+  try { theme = localStorage.getItem('happy-theme'); } catch (e) { theme = null; }
+  if (theme !== 'light' && theme !== 'dark') {
+    theme = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+  }
+  document.documentElement.setAttribute('data-theme', theme);
+})();
+</script>
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="nav">
+  <div class="nav__inner">
+    <a class="nav__name" href="index.html">Happy Choi</a>
+
+    <nav aria-label="Main">
+      <ul class="nav__links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="cv.html">CV</a></li>
+        <li><a href="projects.html" aria-current="page">Projects</a></li>
+      </ul>
+    </nav>
+
+    <div class="nav__end">
+      <button type="button" class="theme-toggle" id="theme-toggle" aria-pressed="false">
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2v2.4M12 19.6V22M2 12h2.4M19.6 12H22M4.9 4.9l1.7 1.7M17.4 17.4l1.7 1.7M4.9 19.1l1.7-1.7M17.4 6.6l1.7-1.7"/></svg>
+        <span id="theme-toggle-label">Dark mode</span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main" class="wrap">
+
+  <header class="page-head">
+    <h1>Projects</h1>
+    <p class="lede">
+      My final year project on trust-aware LLM agents, and the undergraduate
+      research I have been doing at HKUST on how the built environment shapes the
+      heat a person is actually exposed to.
+    </p>
+  </header>
+
+  <!-- ================= TrustShop ================= -->
+  <section class="section" id="trustshop">
+    <h2>TrustShop — Final Year Project</h2>
+
+    <div class="project">
+      <p class="entry__org">
+        Jul 2026 – Present &middot; supervised by Prof. Nevin Lianwen ZHANG
+      </p>
+
+      <h3>What it is</h3>
+      <p>
+        TrustShop is an agent-orchestrated online shopping assistant. The premise is
+        that product reviews are useful in bulk but unreliable individually, so the
+        system treats trust as a first-class signal rather than assuming every
+        review deserves equal weight. An agent layer decomposes an open-ended
+        shopping question into steps, decides which tools to call, and routes
+        evidence according to how trustworthy its source appears.
+      </p>
+
+      <h3>My contribution</h3>
+      <ul>
+        <li>
+          <strong>Trust-weighted review summarisation —</strong> designed and
+          implemented a module using aspect clustering, pros/cons extraction, and
+          self-critique verification with LLMs.
+        </li>
+        <li>
+          <strong>Data acquisition —</strong> built a deterministic pipeline with
+          schema validation and commercial API fallback, collecting and processing
+          product and review data across platforms.
+        </li>
+        <li>
+          <strong>Agent orchestration —</strong> developed tool schemas and
+          contributed to the orchestration layer for open-ended query decomposition
+          and trust-aware routing.
+        </li>
+      </ul>
+
+      <h3>Areas</h3>
+      <ul class="tags">
+        <li>LLMs</li>
+        <li>AI agents</li>
+        <li>Tool calling</li>
+        <li>NLP</li>
+        <li>Review summarisation</li>
+        <li>Python</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ================= UROP ================= -->
+  <section class="section" id="heat-index">
+    <h2>Heat Index Estimation — UROP</h2>
+
+    <div class="project">
+      <p class="entry__org">
+        Jun 2025 – Present &middot; Undergraduate Research Opportunities Programme, HKUST<br>
+        Supervised by Prof. FUNG, Jimmy Chi Hung; co-supervised by Dr. CHAN, Jimmy Wai
+        Man, and Dr. Tilman Leo Hohenberger (from 2026 Summer).
+      </p>
+
+      <h3>The problem</h3>
+      <p>
+        A weather station measures temperature at one single point. Two spots a
+        street apart can still feel very different, because one sits in direct sun
+        while the other is shaded by a building. Reporting one number for a whole
+        district therefore hides the heat that people are actually exposed to as
+        they walk through it.
+      </p>
+
+      <h3>How it developed</h3>
+
+      <div class="subentry">
+        <div class="subentry__head">
+          <h4>2025 Summer</h4>
+          <span class="subentry__when">Jun 2025 – Aug 2025</span>
+        </div>
+        <ul>
+          <li>Predicted localized temperature exposure across different times and locations using a Sky-View Factor approach — the share of the sky hemisphere a location can see, which determines how much of the sun's path is blocked.</li>
+          <li>Performed GIS work on multi-source geospatial data (3D building morphology, building shadows) and microclimate parameters (solar radiation, temperature) using QGIS, CSDI portal, Open3Dhk, and Overpass Turbo.</li>
+        </ul>
+      </div>
+
+      <div class="subentry">
+        <div class="subentry__head">
+          <h4>2025 Fall</h4>
+          <span class="subentry__when">Sep 2025 – Dec 2025</span>
+        </div>
+        <ul>
+          <li>Developed an urban building shadow analysis framework with seamless map merging for dense urban environments.</li>
+          <li>Investigated sunlight pattern determination and visualization at minute-level intervals with high temporal resolution.</li>
+          <li>Investigated map merging strategies without boundary artifacts, so separately measured tiles join into one continuous map.</li>
+          <li>Performed GIS work on building shadows of different morphologies, solar irradiance, and Hong Kong map extraction.</li>
+        </ul>
+      </div>
+
+      <div class="subentry">
+        <div class="subentry__head">
+          <h4>2026 Spring</h4>
+          <span class="subentry__when">Jan 2026 – May 2026</span>
+        </div>
+        <ul>
+          <li>Developed a 24-hour building shadow system across the HKUST campus and expanded the domain to the whole Hong Kong region.</li>
+          <li>Optimized building shadow computation using multi-threading and multi-processing techniques.</li>
+        </ul>
+      </div>
+
+      <div class="subentry">
+        <div class="subentry__head">
+          <h4>2026 Summer</h4>
+          <span class="subentry__when">Jun 2026 – Aug 2026</span>
+        </div>
+        <ul>
+          <li>Developed a Python script for automatic geo-referencing of thermal images (DJI thermal JPG to geo-coded raster).</li>
+          <li>Operated drones to capture DJI thermal JPG images.</li>
+        </ul>
+      </div>
+
+      <div class="subentry">
+        <div class="subentry__head">
+          <h4>2026 Fall</h4>
+          <span class="subentry__when">Sep 2026 – Present</span>
+        </div>
+        <ul>
+          <li>Estimate spatial temperature across the whole Hong Kong region.</li>
+          <li>Use various neural network models for land cover classification.</li>
+          <li>Plan and operate drones to capture DJI thermal JPG images in specified regions.</li>
+        </ul>
+      </div>
+
+      <h3>Areas</h3>
+      <ul class="tags">
+        <li>Urban climate</li>
+        <li>Remote sensing</li>
+        <li>Sky-View Factor</li>
+        <li>Building shadows</li>
+        <li>Drone thermal imaging</li>
+        <li>Geospatial data</li>
+        <li>Python</li>
+        <li>QGIS</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ================= Hackathon ================= -->
+  <section class="section" id="cathay">
+    <h2>Cathay Hackathon 2025</h2>
+
+    <div class="project">
+      <p class="entry__org">Sept 2025 – Oct 2025 &middot; participant</p>
+      <ul>
+        <li>Proposed a RAG-based AI chatbot for airline transit information, converting UX challenges into technical proposals under time constraints.</li>
+        <li>Applied design thinking and collaborative brainstorming to improve passenger services.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section" id="elsewhere">
+    <h2>Elsewhere</h2>
+    <p>
+      The full CV lists my degrees, coursework, awards, internships and tutoring
+      roles in one place. For anything else, email is the best way to reach me.
+    </p>
+    <ul class="linkrow">
+      <li><a class="is-primary" href="cv.html">View my CV</a></li>
+      <li><a href="happychoi_cv.pdf">Download CV (PDF)</a></li>
+      <li><a href="mailto:lhchoiac@connect.ust.hk">Email me</a></li>
+    </ul>
+  </section>
+
+</main>
+
+<footer class="foot">
+  <div class="foot__inner">
+    <span>&copy; 2026 CHOI, Long Ho Happy</span>
+    <nav class="foot__links" aria-label="Footer">
+      <a href="index.html">Home</a>
+      <a href="cv.html">CV</a>
+      <a href="projects.html">Projects</a>
+      <a href="mailto:lhchoiac@connect.ust.hk">Email</a>
+    </nav>
+  </div>
+</footer>
+
+<script src="assets/theme.js"></script>
+</body>
+</html>

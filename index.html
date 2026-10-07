@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Happy Choi</title>
+<meta name="description" content="Happy Choi (CHOI, Long Ho) — Computer Science student at HKUST with an Extended Major in Artificial Intelligence. Undergraduate research on urban heat and building shadows.">
+<link rel="stylesheet" href="assets/styles.css">
+<script>
+/* Apply the saved theme before the page paints, so there is no flash of the
+   wrong colour scheme. Kept inline and tiny on purpose. */
+(function () {
+  var theme;
+  try { theme = localStorage.getItem('happy-theme'); } catch (e) { theme = null; }
+  if (theme !== 'light' && theme !== 'dark') {
+    theme = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+  }
+  document.documentElement.setAttribute('data-theme', theme);
+})();
+</script>
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="nav">
+  <div class="nav__inner">
+    <a class="nav__name" href="index.html">Happy Choi</a>
+
+    <nav aria-label="Main">
+      <ul class="nav__links">
+        <li><a href="index.html" aria-current="page">Home</a></li>
+        <li><a href="cv.html">CV</a></li>
+        <li><a href="projects.html">Projects</a></li>
+      </ul>
+    </nav>
+
+    <div class="nav__end">
+      <button type="button" class="theme-toggle" id="theme-toggle" aria-pressed="false">
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2v2.4M12 19.6V22M2 12h2.4M19.6 12H22M4.9 4.9l1.7 1.7M17.4 17.4l1.7 1.7M4.9 19.1l1.7-1.7M17.4 6.6l1.7-1.7"/></svg>
+        <span id="theme-toggle-label">Dark mode</span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main" class="wrap">
+
+  <section class="hero">
+    <div class="hero__text">
+      <h1>Happy Choi</h1>
+      <p class="lede">
+        I am in my final year of Computer Science at the Hong Kong University of
+        Science and Technology, with an Extended Major in Artificial Intelligence
+        and minors in Mathematics and Big Data Technology. My final year project is
+        on trust-aware LLM agents, and I have been doing undergraduate research on
+        urban heat and building shadows since the summer of 2025.
+      </p>
+      <ul class="linkrow">
+        <li><a class="is-primary" href="cv.html">View my CV</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="happychoi_cv.pdf">Download CV (PDF)</a></li>
+      </ul>
+    </div>
+
+    <aside class="hero__aside" aria-label="Contact details">
+      <h2>Contact</h2>
+      <dl>
+        <dt>Email</dt>
+        <dd><a href="mailto:lhchoiac@connect.ust.hk">lhchoiac@connect.ust.hk</a></dd>
+
+        <dt>LinkedIn</dt>
+        <dd><a href="https://www.linkedin.com/in/long-ho-choi-3376aa2b5/" target="_blank" rel="noopener">long-ho-choi</a></dd>
+
+        <dt>GitHub</dt>
+        <dd><a href="https://github.com/lhchoihappy" target="_blank" rel="noopener">lhchoihappy</a></dd>
+
+        <dt>Location</dt>
+        <dd>Hong Kong</dd>
+      </dl>
+    </aside>
+  </section>
+
+  <section class="section" id="about">
+    <h2>About me</h2>
+    <p>
+      My full name is CHOI, Long Ho, and most people call me Happy. I am an
+      undergraduate at <a href="https://hkust.edu.hk" target="_blank" rel="noopener">HKUST</a>,
+      reading Computer Science with an Extended Major in Artificial Intelligence
+      and a minor in both Mathematics and Big Data Technology.
+    </p>
+    <p>
+      For my final year project I am building <strong>TrustShop</strong>, an
+      agent-orchestrated shopping assistant, supervised by Prof. Nevin Lianwen
+      Zhang. The work covers trust-weighted review summarisation, a validated data
+      acquisition pipeline, and the agent orchestration layer that routes
+      open-ended queries. Separately, since June 2025 I have been working on the
+      <strong>Heat Index Estimation</strong> project under the Undergraduate
+      Research Opportunities Programme, supervised by Prof. FUNG, Jimmy Chi Hung
+      and co-supervised by Dr. CHAN, Jimmy Wai Man and Dr. Tilman Leo Hohenberger.
+      That project has grown from a Sky-View Factor study into a Hong Kong&ndash;wide
+      temperature model, a 24-hour building shadow system, drone thermal imaging,
+      and neural-network land cover classification.
+    </p>
+    <p>
+      In the summer of 2026 I interned as a Summer AI Intern at ESDlife, and in the
+      summer of 2025 as an AI Programmer at the Centre for Intelligent
+      Multidimensional Data Analytics. Both roles were mostly about building things
+      end to end: scrapers, APIs, backend services and the analysis on top of them.
+      The <a href="cv.html">CV page</a> has the full record, and
+      <a href="projects.html">Projects</a> goes into the research in more detail.
+    </p>
+  </section>
+
+  <section class="section" id="interests">
+    <h2>What I work with</h2>
+    <dl class="facts">
+      <dt>AI &amp; data</dt>
+      <dd>Machine learning, deep learning, LLMs and AI agents, NLP, image processing, data mining, reinforcement learning</dd>
+
+      <dt>Programming</dt>
+      <dd>C++, Java, Python, R, JavaScript</dd>
+
+      <dt>Web &amp; systems</dt>
+      <dd>Node.js, React Native, PostgreSQL, Linux</dd>
+
+      <dt>Geospatial</dt>
+      <dd>QGIS, ArcGIS, drone thermal imaging, solar irradiance and building shadow modelling</dd>
+    </dl>
+  </section>
+
+  <section class="section" id="contact">
+    <h2>Contact</h2>
+    <p>
+      If you would like to talk about research, code, or anything else, email is
+      the easiest way to reach me and I will do my best to reply.
+    </p>
+    <ul class="linkrow">
+      <li><a class="is-primary" href="mailto:lhchoiac@connect.ust.hk">lhchoiac@connect.ust.hk</a></li>
+      <li><a href="https://www.linkedin.com/in/long-ho-choi-3376aa2b5/" target="_blank" rel="noopener">LinkedIn</a></li>
+      <li><a href="https://github.com/lhchoihappy" target="_blank" rel="noopener">GitHub</a></li>
+      <li><a href="https://lhchoihappy.github.io/">lhchoihappy.github.io</a></li>
+    </ul>
+  </section>
+
+</main>
+
+<footer class="foot">
+  <div class="foot__inner">
+    <span>&copy; 2026 CHOI, Long Ho Happy</span>
+    <nav class="foot__links" aria-label="Footer">
+      <a href="index.html">Home</a>
+      <a href="cv.html">CV</a>
+      <a href="projects.html">Projects</a>
+      <a href="mailto:lhchoiac@connect.ust.hk">Email</a>
+    </nav>
+  </div>
+</footer>
+
+<script src="assets/theme.js"></script>
+</body>
+</html>
