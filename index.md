@@ -68,14 +68,14 @@ title: ""
       <h3>BEng in Computer Science &mdash; Extended Major in AI</h3>
       <p class="edu-band__sub">The Hong Kong University of Science and Technology &middot; Year 3 (expected 2027)</p>
       <ul class="chips">
-        <li class="chip chip--accent">Machine Learning</li>
-        <li class="chip">Deep Learning</li>
-        <li class="chip">Computer Vision</li>
-        <li class="chip">Reinforcement Learning</li>
-        <li class="chip">Algorithms &amp; Data Structures</li>
-        <li class="chip">Operating Systems</li>
-        <li class="chip">Statistics &amp; Probability</li>
-        <li class="chip">Data Mining</li>
+        <li>Machine Learning</li>
+        <li>Deep Learning</li>
+        <li>Computer Vision</li>
+        <li>Reinforcement Learning</li>
+        <li>Algorithms &amp; Data Structures</li>
+        <li>Operating Systems</li>
+        <li>Statistics &amp; Probability</li>
+        <li>Data Mining</li>
       </ul>
     </div>
   </div>
@@ -97,10 +97,10 @@ title: ""
       </div>
       <p class="skill-card__desc">Object-oriented and systems programming.</p>
       <ul class="chips">
-        <li class="chip">C++</li>
-        <li class="chip">Java</li>
-        <li class="chip">Python</li>
-        <li class="chip">R</li>
+        <li>C++</li>
+        <li>Java</li>
+        <li>Python</li>
+        <li>R</li>
       </ul>
     </article>
 
@@ -111,10 +111,10 @@ title: ""
       </div>
       <p class="skill-card__desc">From classic ML to deep learning and decision making.</p>
       <ul class="chips">
-        <li class="chip">Machine Learning</li>
-        <li class="chip">Deep Learning</li>
-        <li class="chip">Reinforcement Learning</li>
-        <li class="chip">Computer Vision</li>
+        <li>Machine Learning</li>
+        <li>Deep Learning</li>
+        <li>Reinforcement Learning</li>
+        <li>Computer Vision</li>
       </ul>
     </article>
 
@@ -125,11 +125,11 @@ title: ""
       </div>
       <p class="skill-card__desc">Backend services and cross-platform apps.</p>
       <ul class="chips">
-        <li class="chip">JavaScript</li>
-        <li class="chip">Node.js</li>
-        <li class="chip">React Native</li>
-        <li class="chip">PostgreSQL</li>
-        <li class="chip">Linux</li>
+        <li>JavaScript</li>
+        <li>Node.js</li>
+        <li>React Native</li>
+        <li>PostgreSQL</li>
+        <li>Linux</li>
       </ul>
     </article>
 
@@ -140,12 +140,12 @@ title: ""
       </div>
       <p class="skill-card__desc">Foundations for modelling and analysing data.</p>
       <ul class="chips">
-        <li class="chip">Algorithms</li>
-        <li class="chip">Discrete Mathematics</li>
-        <li class="chip">Probability</li>
-        <li class="chip">Statistics</li>
-        <li class="chip">Nonparametric Statistics</li>
-        <li class="chip">Data Mining</li>
+        <li>Algorithms</li>
+        <li>Discrete Mathematics</li>
+        <li>Probability</li>
+        <li>Statistics</li>
+        <li>Nonparametric Statistics</li>
+        <li>Data Mining</li>
       </ul>
     </article>
   </div>
